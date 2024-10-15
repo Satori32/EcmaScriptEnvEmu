@@ -134,6 +134,7 @@
     <ClCompile Include="Lib_A\Multiprecision.cpp" />
     <ClCompile Include="Lib_A\String.cpp" />
     <ClCompile Include="Lib_A\Vector.cpp" />
+    <ClCompile Include="Lib_B\Space2D.cpp" />
     <ClCompile Include="ソース.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +146,7 @@
     <ClInclude Include="Lib_A\String.h" />
     <ClInclude Include="Lib_A\Vector.h" />
     <ClInclude Include="Lib_B\List.h" />
+    <ClInclude Include="Lib_B\Space2D.h" />
     <ClInclude Include="Lib_B\TimeTimer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
