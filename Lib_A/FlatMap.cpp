@@ -31,6 +31,7 @@ FlatMap<Item<Idx, Value>> ConstructFlatMap(size_t Capacity) {
 
 template<class Idx, class Value>
 bool Free(FlatMap<Item<Idx, Value>>& In) {
+	Clear(In);
 	Free(In.V);
 	In.I = 0;
 }
@@ -77,6 +78,10 @@ bool ChangeCapacity(FlatMap<Item<Idx, Value>>& In, const size_t& S) {
 }
 template<class Idx, class Value>
 bool Clear(FlatMap<Item<Idx, Value>>& In) {
+	for (size_t i = 0; i < Size(In.V,M); i++) {
+		if (Index(In.V.M.i) == NULL) { break; }
+		Free(*Index(In.V.M.i));
+	}
 	return Clear(In.V);
 }
 template<class Idx, class Value>

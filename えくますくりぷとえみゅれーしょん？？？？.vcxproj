@@ -128,18 +128,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EcmaScriptEmu.cpp" />
-    <ClCompile Include="FlatMap.cpp" />
-    <ClCompile Include="MemoryAllocator.cpp" />
-    <ClCompile Include="String.cpp" />
-    <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="Lib_A\BigInt.cpp" />
+    <ClCompile Include="Lib_A\FlatMap.cpp" />
+    <ClCompile Include="Lib_A\MemoryAllocator.cpp" />
+    <ClCompile Include="Lib_A\Multiprecision.cpp" />
+    <ClCompile Include="Lib_A\String.cpp" />
+    <ClCompile Include="Lib_A\Vector.cpp" />
     <ClCompile Include="ソース.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EcmaScriptEmu.h" />
-    <ClInclude Include="FlatMap.h" />
-    <ClInclude Include="MemoryAllocator.h" />
-    <ClInclude Include="String.h" />
-    <ClInclude Include="Vector.h" />
+    <ClInclude Include="Lib_A\BigInt.h" />
+    <ClInclude Include="Lib_A\FlatMap.h" />
+    <ClInclude Include="Lib_A\MemoryAllocator.h" />
+    <ClInclude Include="Lib_A\Multiprecision.h" />
+    <ClInclude Include="Lib_A\String.h" />
+    <ClInclude Include="Lib_A\Vector.h" />
+    <ClInclude Include="Lib_B\List.h" />
+    <ClInclude Include="Lib_B\TimeTimer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
