@@ -35,13 +35,20 @@ bool Free(FlatMap<Item<Idx, Value>>& In) {
 	Free(In.V);
 	In.I = 0;
 }
+
+template<class Idx, class Value>
+bool Fun(Item<Idx, Value>& A, Item<Idx, Value>& B) {
+	return A.P < B.P;
+}
 template<class Idx, class Value>
 bool Push(FlatMap<Item<Idx, Value>>& In, const Value& II) {
 	Item<Idx, Value> X;
 	X.P = In.I++;
 	X.V = II;
+	bool B=Push(In.V, X);
+	Sort(In,Fun);
 
-	return Push(In.V, X);
+	return B;
 }
 template<class Idx, class Value>
 bool Pop(FlatMap<Item<Idx, Value> >& In) {
@@ -122,6 +129,22 @@ template<class Idx, class Value>
 Value& Back(FlatMap<Item<Idx, Value>>& In) {
 
 	return Back(In.V).V;
+}template <class T>
+bool Swap(T& A,T& B) {
+	T C = A;
+	A = B;
+	B = C;
+	return true;
+}
+template<class Idx, class Value>
+bool Sort(FlatMap<Item<Idx, Value>>& In, bool(*F)(Item<Idx, Value>&, (Item<Idx, Value>)&) {
+	for (size_t i = 0; i < Size(In); i++) {
+		for (size_t j = i + 1; j < Size(In) - 1; j++) {
+			if (F(*Index(In, i)), *Index(In, j)) {
+				Swap(*Index(In, i), *Index(In, j));
+			}
+		}
+	}
 }
 template<class Idx, class Value>
 FlatMap<Item<Idx, Value>> Duplicate(FlatMap<Item<Idx, Value>> In) {
