@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EcmaScriptEmu.cpp" />
+    <ClCompile Include="Lib_A\Any.cpp" />
     <ClCompile Include="Lib_A\BigInt.cpp" />
     <ClCompile Include="Lib_A\FlatMap.cpp" />
     <ClCompile Include="Lib_A\MemoryAllocator.cpp" />
@@ -139,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EcmaScriptEmu.h" />
+    <ClInclude Include="Lib_A\Any.h" />
     <ClInclude Include="Lib_A\BigInt.h" />
     <ClInclude Include="Lib_A\FlatMap.h" />
     <ClInclude Include="Lib_A\MemoryAllocator.h" />
